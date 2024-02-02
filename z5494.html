@@ -795,7 +795,7 @@ saveBtn.addEventListener("click", function () {
 	  
   };
   // create a vcard file
-  var vcard = "BEGIN:VCARD\nVERSION:4.0\nN:" + contact.name + "\nFN:" + contact.nameDP + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nTITLE:" + contact.title+ "\nURL:" + contact.url1+ "\nURL:" + contact.url2 + "\nPHOTO;BASE64::" + contact.photo + "\nEND:VCARD";
+  var vcard = "BEGIN:VCARD\nVERSION:4.0\nN:" + contact.name + "\nFN:" + contact.nameDP + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nTITLE:" + contact.title+ "\nURL:" + contact.url1+ "\nURL:" + contact.url2 + "\nPHOTO;ENCODING=b;TYPE=JPEG:" + contact.photo + "\nEND:VCARD";
   var blob = new Blob([vcard], { type: "text/vcard" });
   var url = URL.createObjectURL(blob);
   
